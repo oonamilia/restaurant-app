@@ -4,12 +4,10 @@ import { AppRegistry, Image, StyleSheet, View, Button, Alert } from 'react-nativ
 
 export default class Picture extends Component {
   render() {
-    let pic = {
-      uri: 'https://cdn.pixabay.com/photo/2017/01/03/06/24/restaurant-1948732_1280.jpg'
-    };
+    
     return (
       <View>
-        <Image source={pic} style={styles.pic}/>
+        <Image source={{uri: this.props.link}} style={styles.pic}/>
       </View>
     );
   }

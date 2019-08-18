@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import OrderScreen from './screens/OrderScreen.js';
+import MenuScreen from './screens/MenuScreen.js';
 import Picture from './components/Picture.js';
 import TextBlock from './components/TextBlock.js';
 
@@ -18,11 +19,12 @@ class HomeScreen extends React.Component {
   render() {
     let welcomeMessage = 'Tervetuloa ravintolan sovellukseen!';
     let introduction = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+    let imageLink = 'https://cdn.pixabay.com/photo/2017/01/03/06/24/restaurant-1948732_1280.jpg';
 
     return (
       <View >
         <View>
-          <Picture />
+          <Picture link={imageLink} />
           <Text style={styles.h1}>Ravintola Koirankarvat</Text>
         </View>
 
@@ -40,8 +42,8 @@ class HomeScreen extends React.Component {
           </View>
           <View>
             <Button
-                  title="Toinen nappula"
-                  onPress={() => this.props.navigation.navigate('Order')}
+                  title="Ruokalista"
+                  onPress={() => this.props.navigation.navigate('Menu')}
                   color="#a8a8a8"
             />
           </View>
@@ -54,7 +56,8 @@ class HomeScreen extends React.Component {
 const AppNavigator = createStackNavigator(
   {
     Home: HomeScreen,
-    Order: OrderScreen
+    Order: OrderScreen,
+    Menu: MenuScreen
   },
   {
     initialRouteName: "Home"
@@ -79,7 +82,7 @@ const styles = StyleSheet.create({
   },
   h1: {
     textAlign: 'center',
-    backgroundColor: '#000',
+    backgroundColor: '#212121',
     color: '#fff',
     fontSize: 30,
     marginBottom: 30
