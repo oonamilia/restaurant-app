@@ -1,4 +1,4 @@
-# restaurant-app
+# React tehtävä websk 2 kurssille 
 React native test
 
 Sovellusta varten täytyy asentaa React Navigation (https://reactnavigation.org/docs/en/getting-started.html)
