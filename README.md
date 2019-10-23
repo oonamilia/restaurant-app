@@ -10,7 +10,7 @@ ja
 
     expo install react-native-gesture-handler react-native-reanimated
 
-# Tehtävänanto: 
+# Tehtävä 
 
 1) Tee oma sovellus Reactilla. Voi ottaa mallia testisovelluksesta, mutta sen pitäisi olla itse tehty tyhjältä pohjalta. Sovellukseen tulee:
         Vähintään 4 komponenttia
